@@ -37,17 +37,18 @@ total = numberOfPeople * numberPerPerson
 # Assigning minimumDogs equal to 
 # total of hot dogs and buns divided by hot dog packages
 # Floor division (//) rounds down
+# Ex: 8 people * 2 hot dogs each person = 16 (total HDs) // 10 (HD packet) = 1 remainder 6
 minimumDogs = total // HOT_DOG_PACKAGES
 
 # See if the number of people attending is large enough to need more than one package of hot dogs
 if minimumDogs > 0:
     # Calculate the number of hot dogs that will be left over from a package
     # Modulus (%) is remainder
-    # total = 16 % 10 = 6
+    # Ex: 8 people * 2 hot dogs each person = 16 (total HDs) % 10 (HD packet) = remainder 6
     hotDogsLeftOver = total % HOT_DOG_PACKAGES
 
     # If leftovers, add another package of hot dogs
-    # Ex: 18 people and 1 package (10) of hot dogs (need another package)
+    # Ex: 16 total HDs % 10 = remainder 6 (need another package since it's != 0)
     if hotDogsLeftOver != 0:
         minimumDogs += 1 # Adding 1 to the variable (or minimumDogs = minimumDogs + 1)
 
