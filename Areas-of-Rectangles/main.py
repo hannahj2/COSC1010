@@ -5,6 +5,12 @@
 # COSC 1010
 #
 # Local variables
+lengthA = 0
+widthA = 0
+lengthB = 0
+widthB = 0
+areaA = 0
+areaB = 0
 
 # Get length A
 lengthA = int(input("Enter the length of rectangle A: "))
@@ -26,8 +32,8 @@ areaB = lengthB * widthB
 
 # Print area comparison using if-elif-else statements
 if areaA > areaB:
-    print("Rectangle 1 has the greater area.")
+    print("Rectangle A has the greater area.")
 elif areaB > areaA:
-    print("Rectangle 2 has the greater area.")
+    print("Rectangle B has the greater area.")
 else:
     print("Both rectangles have the same area.")
