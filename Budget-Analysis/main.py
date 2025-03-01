@@ -9,6 +9,8 @@
 budget = 0
 continueExpense = 'y' # yes or no to continue to add expenses
 total = 0
+overBudget = 0
+underBudget = 0
 
 # Ask user to enter amount they have budgeted for a month
 budget = float(input('How much is your budget for the month?: $'))
@@ -28,6 +30,7 @@ if total > budget:
 
     # Sees how much they are over budget
     overBudget = total - budget
+    
     # Print how over budget they are
     print(f'You were over your budget by ${overBudget:.2f}. Try spending less!' )
 elif total < budget:
@@ -37,5 +40,8 @@ elif total < budget:
 
     # Print how under budget they are
     print(f'You were under your budget by ${underBudget:.2f}. Nice job!')
+
+    # Print that they used all their budget
+    # If not under or over budget
 else:
     print('You used all of your budget!')   
