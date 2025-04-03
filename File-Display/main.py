@@ -8,16 +8,18 @@
 
 # Open the file named numbers.txt
 def main():
-    number_file = open('./File-Display/numbers.txt', 'r')
+    numberFile = open('numbers.txt', 'r')
 
     # Read the file's contents
-    file_contents = number_file.read()
+    for line in numberFile:
+        number = int(line)
 
-    # Display the file's contents
-    print(file_contents)
+        # Display the file's contents
+        print(number)
 
     # Close the file
-    number_file.close()
+    numberFile.close()
 
+# Execute main() function
 if __name__ == '__main__':
     main()
