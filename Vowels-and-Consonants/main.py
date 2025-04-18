@@ -8,7 +8,7 @@
 
 # User input for entering a string
 def main():
-    stringInput = input('Enter a string of characters: ')
+    stringInput = input('Enter a sentence: ')
 
     # Displays the number of vowels and consonants the string contains
     print(f'This string has {numberOfVowels(stringInput)} vowels and {numberOfConsonants(stringInput)} consonants.')
