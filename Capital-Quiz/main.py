@@ -1,6 +1,6 @@
 #
-# Name
-# Date
+# Hannah Johnson
+# 04/21/2025
 # Capital Quiz Programming Project
 # COSC 1010
 #
