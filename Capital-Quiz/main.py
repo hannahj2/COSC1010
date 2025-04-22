@@ -8,6 +8,9 @@
 
 import random
 
+# Number of states to quiz the user
+NUMBER_OF_STATES = 5
+
 def main():
     # Initialize dictionary
     capitals = {'Alabama':'Montgomery', 'Alaska':'Juneau',
@@ -35,10 +38,51 @@ def main():
                 'Vermont':'Montpelier', 'Virginia':'Richmond',
                 'Washington':'Olympia', 'West Virginia':'Charleston',
                 'Wisconsin':'Madison', 'Wyoming':'Cheyenne'}
+    while True:
+        # Local variables
+        correct = 0 # Keeps count of correct responses
+        incorrect = 0 # Keeps count of incorrect responses
 
-    # Local variables
+        # Quiz the user
+        for count in range(NUMBER_OF_STATES):
+            
+            # At first, I did = capitals.popitem()
+            # but it only returned the last 5 states
 
-    # Continue until user quits the game.
+            # Get a random state & capital
+            state, capital = random.choice(list(capitals.items()))
 
+            # User input to ask user for the capital
+            quiz = input(f'What is the capital of {state}? ')
+
+            # If user response is correct
+            if quiz.lower() == capital.lower():
+
+                # Add 1 to correct responses
+                correct += 1
+
+                # Print message showing the user they got it correct
+                print('Great job! You got this correct!')
+
+            # If user response is incorrect
+            else:
+
+                # Add 1 to incorrect responses
+                incorrect += 1
+
+                # Print message showing the user they got it incorrect
+                print(f'Incorrect! The capital of {state} is {capital}.')
+
+        # Display the correct and incorrect responses
+        print('\nHere are your results: ')
+        print(f'Correct responses: {correct}')
+        print(f'Incorrect responses: {incorrect}')
+
+        # Continue until user quits the game.
+        continueGame = input('\nWould you like to continue? (y for yes, n for no): ')
+
+        if continueGame.lower() != 'y':
+            print('Thanks for playing the capital quiz! Bye!')
+            break
 # Call the main function.
 main()

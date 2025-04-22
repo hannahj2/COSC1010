@@ -6,7 +6,7 @@
 #
 # Use comments liberally throughout the program. 
 
-# User input
+# User input for entering a sentence
 def pigLatinConverter():
 
     sentence = input('Enter a sentence: ').split()
