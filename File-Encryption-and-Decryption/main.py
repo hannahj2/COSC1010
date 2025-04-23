@@ -12,7 +12,7 @@ ENCRYPTED_FILE = 'encrypted.txt'
 
 def encryptFile():
 
-    codes = {
+    encryptedCodes = {
         'A':')','a':'0','B':'(','b':'9','C':'*','c':'8',\
         'D':'&','d':'7','E':'^','e':'6','F':'%','f':'5',\
         'G':'$','g':'4','H':'#','h':'3','I':'@','i':'2',\
@@ -40,10 +40,10 @@ def encryptFile():
         # to write an encrypted version of the file's contents
         encryptedContents = ''
         for character in textFileContents:
-            if character in codes:
+            if character in encryptedCodes:
 
                 # replace letter with coded
-                encryptedContents += codes[character]
+                encryptedContents += encryptedCodes[character]
             else:
                 # not alphabetic characters stay the same
                 encryptedContents += character
@@ -53,8 +53,8 @@ def encryptFile():
 
 def decryptFile():
 
-    # Reversed codes
-    reversedCodes = {
+    # Codes
+    decryptedCodes = {
         'A':')','a':'0','B':'(','b':'9','C':'*','c':'8',\
         'D':'&','d':'7','E':'^','e':'6','F':'%','f':'5',\
         'G':'$','g':'4','H':'#','h':'3','I':'@','i':'2',\
@@ -81,10 +81,10 @@ def decryptFile():
         # Decrypt the contents
         decryptedContents = ''
         for character in encryptedFileContents:
-            if character in reversedCodes:
+            if character in decryptedCodes:
 
                 # replace letter with coded
-                decryptedContents += reversedCodes[character]
+                decryptedContents += decryptedCodes[character]
             else:
                 # not alphabetic characters stay the same
                 decryptedContents += character
